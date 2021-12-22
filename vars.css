@@ -1,0 +1,22 @@
+/* CSS variables for pico.css theme */
+
+/* Light scheme */
+[data-theme="light"]:not(#\9) {
+    --primary: #43a047;
+    --primary-hover: #388e3c;
+    --primary-focus: rgba(67, 160, 71, 0.125);
+    --primary-inverse: #fff;
+}
+
+/* Dark scheme */
+[data-theme="dark"]:not(#\9) {
+    --primary: #43a047;
+    --primary-hover: #4caf50;
+    --primary-focus: rgba(67, 160, 71, 0.25);
+    --primary-inverse: #fff;
+}
+
+:root:not(#\9) {
+    --font-size: 20px;
+    --h1-color: var(--primary);
+}

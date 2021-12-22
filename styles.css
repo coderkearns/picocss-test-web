@@ -1,0 +1,35 @@
+.grid {
+    --grid-spacing-vertical: 1em;
+    --grid-spacing-horizontal: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(3em, 1fr));
+}
+
+.grid div {
+    /* center everything in the div */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* make it look nice */
+    border: 3px solid var(--primary);
+    border-radius: var(--border-radius);
+    width: clamp(var(--grid-spacing-horizontal), 1em, 100%);
+    height: clamp(var(--grid-spacing-vertical), 1em, 100%);
+    padding: var(--grid-spacing-vertical) var(--grid-spacing-horizontal);
+}
+
+#toggle-theme {
+    /* In the top-right corner always, even when scrolled */
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    /* Add a shadow so it looks like it's floating */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 15px 40px rgba(0, 0, 0, 0.05);
+}
+
+#btns {
+    grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+}
+
+#btns button {
+    width: clamp(var(--grid-spacing-horizontal), fit-content, 100%);
+}
